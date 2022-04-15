@@ -1,5 +1,6 @@
 import { AfterViewChecked, AfterViewInit, Component, HostListener, TemplateRef, ViewChild, ViewEncapsulation } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +10,11 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class AppComponent implements AfterViewInit{
   fullScreenImage: string="";
-  constructor(private dialog: MatDialog){}
+  constructor(private dialog: MatDialog,
+    private _snackBar: MatSnackBar){}
   ngAfterViewInit(): void {
    this.openDialog()
+   this.openSnackBar()
   }
   title = 'farewell-app';
   presentSelectedImage=''
@@ -104,14 +107,21 @@ AlakaImglist=[
     this.getScreenWidth = window.innerWidth;
     this.getScreenHeight = window.innerHeight;
     console.log("Width of screen is ",this.getScreenWidth)
-    if(this.getScreenWidth<500){
+    if(this.getScreenWidth<775){
       this.isMobileview=true
     }else{
       this.isMobileview=false
     }
   // this.openDialog()
   }
- 
+  openSnackBar() {
+    this._snackBar.open(' ', 'Welcome, the page has successfully loaded !', {
+      duration: 5 * 1000,
+    });
+    // this._snackBar.openFromComponent("message", {
+    //   duration: 3 * 1000,
+    // });
+  }
   openDialog(): void {
     //console.log("function called")
     this.dialog.open(this.dialogRef, { data: "some data" });
