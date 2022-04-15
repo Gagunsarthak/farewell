@@ -1,0 +1,786 @@
+
+
+
+
+  <head>
+   
+    <!-- <title>
+      Tailwind Starter Template - Landing Page Template: Tailwind Toolbox
+    </title> -->
+
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+    <!--Replace with your tailwind.css once created-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.13.6/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
+   
+  </head>
+
+  <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+    <div class="card w-96 bg-base-100 shadow-xl image-full">
+      <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
+      <div class="card-body">
+        <h2 class="card-title">Shoes!</h2>
+        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <div class="card-actions justify-end">
+          <button class="btn btn-primary">Buy Now</button>
+        </div>
+      </div>
+    </div>
+    
+    <!--Nav-->
+   
+  
+    <!-- Banner -->
+    <div class="pt-24"  *ngIf="!isMobileview">
+    
+      <section class="h-full px-4" style="padding-bottom: 6rem;">
+        <div class="z-20  text-white container mx-auto" style="display: block; color: black;">
+          <h1 class="mb-4">Tailwind Banner with Object Fit Image isMobileview:{{isMobileview}}</h1>
+          <p class="leading-normal">This is a banner that can be resized to your heart’s content without
+             using a background image property.</p>
+          <p class="leading-normal">Integer eu massa ipsum. Quisque dui purus, congue in urna sed, volutpat condimentum nisi.
+             Ut elementum tellus quam, sit amet congue ante tempus id. Phasellus ultricies enim in est posuere, quis semper urna consequat.</p>
+          <a href="#" class="inline-block bg-blue-500 text-white no-underline hover:bg-blue-800 mt-4 p-4 rounded">A Call to Action</a>
+        </div>
+        <div class="absolute inset-0 h-auto z-10" style="height: 84%;">
+          <img src="../assets/images/KishorMohantyBanner.jpeg" alt="" class="h-full w-full object-fit-cover " [ngClass]="{'object-fit-scale-down': isMobileview}">
+        </div>
+      </section>
+
+    </div>
+    
+    <!--Hero-->
+    <div class="pt-24 " >
+     
+      <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center" style="color: black;">
+        <!--Left Col-->
+     
+        <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+          <!-- <p class="uppercase tracking-loose w-full">ସ୍ୱାମୀଙ୍କ ଅଧୁରା ସ୍ୱପ୍ନ ପୁରା କରିବି ! </p>
+          
+          <h1 class="my-4 text-5xl font-bold leading-tight" style=" font-family: 'Lucida Handwriting', 'Courier New', monospace;">
+            Farewell !!
+          </h1> -->
+        
+       
+           <figure class="quote">
+            <blockquote>
+              <p class="leading-normal text-2xl mb-8 ">
+                <strong >"ସ୍ୱାମୀଙ୍କ ଅଧୁରା ସ୍ୱପ୍ନ ପୁରା କରିବି !"</strong> 
+               </p>
+            </blockquote>
+            <figcaption>
+              &mdash;   ଅଳକା ମହାନ୍ତି  </figcaption>
+          </figure>
+          <div class="flex">
+       
+            <div class="flex-1 w-64 ...">
+              <button class="mx-auto lg:mx-0 hover:underline btn-primary text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out" 
+              mat-raised-button color="primary"
+              (click)="openDialog()">
+               Pay Tribute
+              </button>
+            </div>
+            <div class="flex-1 w-32 ...">
+              <button class="mx-auto lg:mx-0 hover:underline btn-primary text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out" 
+              mat-raised-button color="warn"
+              (click)="scrollToBottom()">
+              <mat-icon> arrow_downward </mat-icon>
+              </button>
+            </div>
+          </div>
+         
+     
+        </div>
+        <!--Right Col-->
+        <div class=" w-full md:w-3/5 py-6 text-center z-50 " >
+          <img class="w-full md:w-4/5 "  style="border-radius:100%;" src="../assets/images/Alaka.jpg" />
+        </div>
+      </div>
+    </div>
+    <div class="relative -mt-12 lg:-mt-24">
+      <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
+            <path
+              d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+              opacity="0.100000001"
+            ></path>
+            <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" id="Path-4" opacity="0.200000003"></path>
+          </g>
+          <g transform="translate(-4.000000, 76.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path
+              d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"
+            ></path>
+          </g>
+        </g>
+      </svg>
+    </div>
+<!-- 
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+  </div>
+  
+  <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/137857207" allowfullscreen></iframe>
+  </div> -->
+  <!-- <div class="flex ">
+    <div style="color: #000;"> <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+  </div>
+</div>
+    <div style="color: #000;"> <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/137857207" allowfullscreen></iframe>
+  </div> </div>
+    <div style="color: #000;">03</div>
+  </div> -->
+  
+
+  <ng-template #dialogRef>
+    <div class=" justify-center">
+      <h1 mat-dialog-title class="font-medium leading-tight text-4xl mt-0 mb-2 ">A Tribute to <br>
+        <b>Kishore Mohanty</b></h1>
+      <div class=" text-green-500 font-bold text-center rounded-lg justify-center">
+        <!-- <iframe  width="250" height="250" src="https://www.youtube.com/embed/EtSLtktyS_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <iframe width="250" height="250" src="https://www.youtube.com/embed/wG1-5Xc9rcM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>             
+  
+        <P>Kishore Mohanty's Untimely Demise</P>
+      </div>
+     
+      <div class=" text-green-500 font-bold text-center rounded-lg justify-center">
+        <!-- <iframe  width="250" height="250" src="https://www.youtube.com/embed/EtSLtktyS_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <iframe width="250" height="250" src="https://www.youtube.com/embed/28-ifXLmAXw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>       
+  
+        <p>Alaka Mohanty : A New Ray of Hope! </p>
+      </div>
+   
+    </div>
+ 
+<div mat-dialog-actions class="justify-end">
+  <button mat-button mat-dialog-close   mat-flat-button color="warn">Close</button>
+</div>
+    <!-- <<< Here is the problem data is undefined -->
+ 
+  </ng-template>
+   
+
+   
+    <section class="bg-white border-b py-8" style="background: #70A548;" >
+      <div class="container max-w-5xl mx-auto m-8">
+        <h1 class="text-6xl font-bold leading-normal mt-0 mb-2  text-center " style="    font-family: cursive;
+        color: #3a3a3a;
+        font-weight: 600;">
+          Political Journey - An Echo of Triumph
+        </h1>
+        <!-- <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-red-600">
+        
+        </h1> -->
+        
+        <div class="w-full mb-4">
+          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="w-5/6 sm:w-1/2 p-6">
+            <h2 class="font-medium leading-tight text-4xl mt-0 mb-2 font-bright">Started from the Grass Root Level</h2>
+            <h3 class="text-3xl  font-bold leading-none mb-3">
+              <span>&#8226;</span>     Kishore Mohanty started his political journey as a <strong >Councilor of Jharsuguda Municipality in 1984</strong>
+            </h3>
+            <h3 class=" mb-8 ">
+              <span>&#8226;</span> He became the <strong >First Directly Elected Chairman </strong>of Jharsuguda Municipality in <strong >1992</strong>
+             
+
+            </h3>
+          </div>
+          <div class="w-full sm:w-1/2 p-6">
+            <img src="../assets/images/KMLawyer.jpeg" class="circular-image">
+           
+          </div>
+        </div>
+        <div class="flex flex-wrap flex-col-reverse sm:flex-row">
+          <div class="w-full sm:w-1/2 p-6 mt-6">
+            <img src="../assets/images/KMBP.jpeg" class="circular-image">
+          </div>
+          <div class="w-full sm:w-1/2 p-6 mt-6">
+            <div class="align-middle">
+              <h2 class="font-medium leading-tight text-4xl mt-0 mb-2 font-bright">Loyalty Personified: </h2>  <h4 class="font-medium leading-tight text-4xl mt-0 mb-2 text-blue-600">
+                From Janta Dal to Inception of Biju Janta Dal to its Glorious Present !
+              </h4>
+             
+              <ul>
+                <li>   <h3 class="text-3xl font-bold leading-none mb-3">
+                  <span>&#8226;</span> An ardent follower of <strong >Legendary Biju Patnaik</strong>, got ticket from <strong>Janata Dal</strong> and became MLA of Jharsuguda Constituency in 1990
+                </h3></li>
+                <li>  <h3 class=" mb-8">
+                  <span>&#8226;</span> In 2000, he was elected to the <strong>Odisha Legislative Assembly</strong> from Jharsuguda Constituency with the ticket of <strong>BJD</strong>
+                 
+                  
+                </h3></li>
+              
+              </ul>
+            
+            
+            </div>
+          </div>
+        </div>
+
+        <!-- second column -->
+        <div class="w-full mb-4">
+          <!-- <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div> -->
+        </div>
+        <div class="flex flex-wrap">
+          <div class="w-5/6 sm:w-1/2 p-6">
+            <h2 class="font-medium leading-tight text-4xl mt-0 mb-2 font-bright">Formation Of Jharsuguda</h2>            
+            <h3 class="text-3xl  font-bold leading-none mb-3">
+              <span>&#8226;</span> Kishore Mohanty's vison of making Jharsuguda<strong > a full fledge District</strong> became a reality on <b>1st January 1994.</b>
+            </h3>
+            <h3 class=" mb-8">
+              <span>&#8226;</span>On his one call. people of Jharsuguda spontaneously  <strong > weighed the then Chief minister of Odisha, Biju Patnaikwith their blood</strong> on this golden day
+             
+              
+            </h3>
+          </div>
+          <div class="w-full sm:w-1/2 p-6">
+            <img src="../assets/images/bloodDonation.jpeg" class="circular-image">
+           
+          </div>
+        </div>
+        <div class="flex flex-wrap flex-col-reverse sm:flex-row">
+          <div class="w-full sm:w-1/2 p-6 mt-6">
+            <img src="../assets/images/chiefWhip.jpg" class="circular-image">
+          </div>
+          <div class="w-full sm:w-1/2 p-6 mt-6">
+            <div class="align-middle">
+              <h2 class="font-medium leading-tight text-4xl mt-0 mb-2 font-bright"> The Tale of Victory Continues ...</h2>
+              <ul>
+                <li> 
+                  <h3 class="text-3xl  font-bold leading-none mb-3">
+                    <span>&#8226;</span> He became the<strong > Chief Whip </strong> of the ruling party afer emerging victorious in 2004 General Assembly Elections
+                  </h3>
+               </li>
+                <li>  <h3 class=" mb-8">
+                  <!-- <span>&#8226;</span>On his one call. people of Jharsuguda spontaneously  <strong> weighed the then Chief minister of Odisha, Biju Patnaik with their blood</strong> on this golden day.
+                  -->
+                  
+                </h3></li>
+               
+              </ul>
+            
+            
+            </div>
+          </div>
+        </div>
+          <!-- third column -->
+          <div class="w-full mb-4">
+            <!-- <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div> -->
+          </div>
+          <div class="flex flex-wrap">
+            <div class="w-5/6 sm:w-1/2 p-6">
+              <h2 class="font-medium leading-tight text-4xl mt-0 mb-2 font-bright">Another feather in his cap !</h2>
+              <h3 class="text-3xl  font-bold leading-none mb-3">
+                <span>&#8226;</span>    On 9th August, 2008 he became  <strong >the Speaker of Odisha Legislative Assembly </strong>
+              </h3>
+              <h3 class=" mb-8">
+                <span>&#8226;</span> He became the <strong >First Directly Elected Chairman </strong>of Jharsuguda Municipality in <strong>1992</strong>
+               
+  
+              </h3>
+            </div>
+            <div class="w-full sm:w-1/2 p-6">
+              <img src="../assets/images/KMSpeaker.jpg" class="circular-image">
+             
+            </div>
+          </div>
+          <div class="flex flex-wrap flex-col-reverse sm:flex-row">
+            <div class="w-full sm:w-1/2 p-6 mt-6">
+              <img src="../assets/images/KMBP.jpeg" class="circular-image">
+            </div>
+            <div class="w-full sm:w-1/2 p-6 mt-6">
+              <div class="align-middle">
+                <h2 class="font-medium leading-tight text-4xl mt-0 mb-2 font-bright">Faith Restored : </h2> <span>
+                  <h4 class="font-medium leading-tight text-4xl mt-0 mb-2 text-blue-600">
+                    Nominated by C.M. Naveen Patnaik to Rajya Sabha  
+                   </h4>
+                </span>
+               
+                <ul>
+                  <li>   <h3 class="text-3xl  font-bold leading-none mb-3">
+                    <span>&#8226;</span>In 2010, Kishore Mohanty was <strong>nominated to Rajya Sabha</strong>
+                  </h3></li>
+                  <li>  <h3 class=" mb-8">
+                    <span>&#8226;</span> He raised the concerns and voiced the demands and grievances of the people of Odisha at National level.
+                   
+                    
+                  </h3></li>
+                
+                </ul>
+              
+              
+              </div>
+            </div>
+          </div>
+          <!-- Fourth Column -->
+          <div class="w-full mb-4">
+            <!-- <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div> -->
+          </div>
+          <div class="flex flex-wrap">
+            <div class="w-5/6 sm:w-1/2 p-6">
+              <h2 class="font-medium leading-tight text-4xl mt-0 mb-2 font-bright">Unleashed the Full Potential of W.O.D.C </h2>
+              <h3 class="text-3xl font-bold leading-none mb-3">
+                <span>&#8226;</span>   In <b>2015</b> , Kishore Mohanty was appointed as  <strong >the Chairman of the Western Odisha Development Council </strong>
+              </h3>
+              <h3 class=" mb-8">
+                <span>&#8226;</span> Carried out large <b >scale development across 11 districts of Western Odisha</b>
+               
+  
+              </h3>
+            </div>
+            <div class="w-full sm:w-1/2 p-6">
+              <img src="../assets/images/KMWODC.jpg" class="circular-image">
+             
+            </div>
+          </div>
+          <div class="flex flex-wrap flex-col-reverse sm:flex-row">
+            <div class="w-full sm:w-1/2 p-6 mt-6">
+              <img src="../assets/images/KMbraj.jpeg" class="circular-image">
+            </div>
+            <div class="w-full sm:w-1/2 p-6 mt-6">
+              <div class="align-middle">
+                <h2 class="font-medium leading-tight text-4xl mt-0 mb-2 font-bright">Always A Man of the Masses: </h2> <span>
+                  <!-- <h4 class="font-medium leading-tight text-4xl mt-0 mb-2 text-blue-600">
+                    Nominated by C.M. Naveen Patnaik to Rajya Sabha  
+                   </h4> -->
+                </span>
+               
+                <ul>
+                  <li>   <h3 class="text-3xl  font-bold leading-none mb-3">
+                    <span>&#8226;</span>In 2019, Kishore Mohanty contested from <strong > Brajrajnagar</strong>
+                  </h3></li>
+                  <li>  <h3 class="mb-8">
+                    <span>&#8226;</span> BJD emerged victorious in Brajrajnagar for the <strong >First Time</strong> under the leadership of Kishore Mohanty
+                   
+                    
+                  </h3></li>
+                
+                </ul>
+              
+              
+              </div>
+            </div>
+          </div>
+       
+      </div>
+    </section>
+    <!-- image carousel -->
+ 
+<div class="horizontal-slider scrollable-element">
+  <h1 class="my-4  font-bold leading-tight" style=" color: black;">
+    Press and Public Reaction on Alaka Mohanty's entry into politics
+  </h1>
+  <div class="slider-container" >
+  
+    <div class="item" *ngFor="let img of AlakaImglist"><img src="{{img}}" (click)="getFullImage(img)"></div>
+  
+  </div>
+</div>
+    <div class="min-h-screen flex items-center justify-center" >
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 p-5" >
+        <div class="bg-green-100 text-green-500 text-lg font-bold text-center rounded-lg pt-5 pl-6" >
+          <iframe width="300" height="300" src="https://www.youtube.com/embed/svrirXKh-5w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                     <p>Alaka Mohanty says she will strive to fulfill her husband's dreams</p>
+        </div>
+        <div class="bg-green-100 text-green-500 text-lg font-bold text-center rounded-lg pt-5 pl-6" >
+          <iframe width="300" height="300" src="https://www.youtube.com/embed/jKeGhQtCP78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      
+            <p>Kishore Mohanty's wife Alaka Mohanty statement on Brajarajnagar politics..</p>
+        </div>
+        <div class="bg-green-100 text-green-500 text-lg font-bold text-center rounded-lg pt-5 pl-6" >
+          <iframe width="300" height="300" src="https://www.youtube.com/embed/28-ifXLmAXw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>       
+        <p>"If Party Wants, I Will Fight Polls": Alaka Mohanty || KalingaTV</p>
+        </div>
+        <div class="bg-green-100 text-green-500 text-lg font-bold text-center rounded-lg pt-5 pl-6">
+
+         
+          <iframe width="300" height="300" src="https://www.youtube.com/embed/Kuszaljcpw4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>Kishor Mohanty fighting for the rights of youth of Jharsuguda</p>
+        </div>
+        <div class="bg-green-100 text-green-500 text-lg font-bold text-center rounded-lg pt-5 pl-6">
+
+         
+          <iframe width="300" height="300" src="https://www.youtube.com/embed/lpiXa_Efic4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>     
+               <p>Kishor Mohanty taking up the struggles of the masses in the assembly  </p>
+        </div>
+          <div class="bg-green-100 text-green-500 text-lg font-bold text-center rounded-lg pt-5 pl-6">
+            <iframe  width="300" height="300" src="https://www.youtube.com/embed/EtSLtktyS_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <P>Kishore Mohanty's Body Laid To Rest With Guard Of Honour</P>
+          </div>
+          <div class="bg-green-100 text-green-500 text-lg font-bold text-center  rounded-lg pt-5 pl-6">
+            <iframe width="300" height="300" src="https://www.youtube.com/embed/IPp0FbQqZUk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>BJD MLA Kishore Mohanty No More | Last Tributes Paid To Leader At His Residence In Jharsuguda</p>          </div>
+            <div class="bg-green-100 text-green-500 text-lg font-bold text-center rounded-lg pt-5 pl-6">
+              <iframe width="300" height="300" src="https://www.youtube.com/embed/64sPST0ZxMk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <!-- <iframe  width="300" height="300" src="https://www.youtube.com/embed/EtSLtktyS_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+              <P>MLA Kishore Kumar Mohanty Addresses People Of Jharsuguda Over BSKY Smart Health Card || Kalinga TV</P>
+            </div>
+
+            <div class="bg-green-100 text-green-500 text-lg font-bold text-center rounded-lg pt-5 pl-6">
+              <iframe width="300" height="300" src="https://www.youtube.com/embed/3sVXxuoeGU8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>              <!-- <iframe  width="300" height="300" src="https://www.youtube.com/embed/EtSLtktyS_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+              <P>Kishore Mohanty Speaks On Biju Patnaik During BJD’s Executive Body Meet</P>
+            </div>
+          <div class="bg-green-100 text-green-500 text-lg font-bold text-center rounded-lg pt-5 pl-6">
+            <iframe width="300" height="300" src="https://www.youtube.com/embed/0FVHzrAVUdE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Kishore Mohanty On Mahanadi River Water Issue</p>   
+          </div>
+          <div class="bg-green-100 text-green-500 text-lg font-bold text-center  rounded-lg pt-5 pl-6">
+            <iframe  width="300" height="300" src="https://www.youtube.com/embed/r_qEovwpCTg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>BJD MLA Kishore Kumar Mohanty Criticized Congress Over Odisha Assembly Adjourned । NandighoshaTV</p>   
+          </div>
+          
+          <div class="bg-green-100 text-green-500 text-lg font-bold text-center rounded-lg pt-5 pl-6">
+            <iframe width="300" height="300" src="https://www.youtube.com/embed/5Ele35w-piU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>Kishore Mohanty Raises DMF Fund Irregularities In The Assembly</p>
+          </div>
+          <div class="bg-green-100 text-green-500 text-lg font-bold text-center  rounded-lg pt-5 pl-6">
+            <iframe  width="300" height="300" src="https://www.youtube.com/embed/v6B-dMOSc4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         <p>Kusmel Villagers with thehelp of Brajrajnagar MLA Kishore Mohanty solemnise the wedding of Soni Yadav</p>
+          </div>
+          <div class="bg-green-100 text-green-500 text-lg font-bold text-center  rounded-lg pt-5 pl-6">
+            <iframe  width="300" height="300" src="https://www.youtube.com/embed/lTfqsmrQCFo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>BJD Candidate Kishore Mohanty Campaign at Lakhanpur</p>
+          </div>
+          <div class="bg-green-100 text-green-500 text-lg font-bold text-center rounded-lg pt-5 pl-6">
+            <iframe  width="300" height="300" src="https://www.youtube.com/embed/O2a_D1Tic34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Jharsuguda: Brajarajnagar MLA Kishor Mohanty visits Belpahar Hospital | Kalinga TV</p>
+          </div>
+          <div class="bg-green-100 text-green-500 text-lg font-bold text-center  rounded-lg pt-5 pl-6">
+            <iframe  width="300" height="300" src="https://www.youtube.com/embed/FFy6bwweQVQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>CM Naveen Patnaik To Visit Western Odisha Today: Reaction Of BJD Leader Kishore Mohanty</p>
+          </div>
+          <div class="bg-green-100 text-green-500 text-lg font-bold text-center  rounded-lg pt-5 pl-6">
+            <iframe width="300" height="300" src="https://www.youtube.com/embed/1CMl3BXuecI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Brajrajnagar MLA Kishore Mohanty Briefs Media On Smooth Conduct Of Plus 2 Examination</p>
+          </div>
+          <div class="bg-green-100 text-green-500 text-lg font-bold text-center  rounded-lg pt-5 pl-6">
+            <iframe width="300" height="300" src="https://www.youtube.com/embed/cQrACGINT_s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Alaka campaigning for hubby Kishore Mohanty, BJD's Brajrajnagar MLA candidate | Kalinga TV</p>
+          </div>
+        
+    
+      </div>
+  </div>
+  <!-- image carousel -->
+
+<div class="horizontal-slider scrollable-element">
+
+  <div class="slider-container" >
+  
+    <div class="item" *ngFor="let img of imgList"><img src="{{img}}" (click)="getFullImage(img)"></div>
+  
+  </div>
+</div>
+
+
+  <!-- videos of public -->
+  <mat-accordion>
+  
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header style="background: #70A548;">
+        <mat-panel-title>
+          <strong>Public Perspective on Kishore Mohanty's untimely demise</strong> 
+        </mat-panel-title>
+        <!-- <mat-panel-description>
+          Currently I am {{panelOpenState ? 'open' : 'closed'}}
+        </mat-panel-description> -->
+      </mat-expansion-panel-header>
+      <div class="min-h-screen flex items-center justify-center" style="background: black;" >
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 p-5" >
+          <!-- <div class=" text-green-500 text-lg font-bold text-center p-10 rounded-lg">
+            <video controls #videoPlayer>
+              <source src="../assets/videos/Movie001.mp4" type="video/mp4" />
+              
+          </video>
+            <p>Kishor Mohanty fighting for the rights of youth of Jharsuguda</p>
+          </div> -->
+            <!-- <div class=" text-green-500 text-lg font-bold text-center p-10 rounded-lg" *ngFor="let video of videoList">
+              <iframe  width="300" height="300" [src]="video.link" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <P>{{video.desc}}</P>
+            </div> -->
+            <div class=" text-green-500 text-lg font-bold text-center rounded-lg">
+              <iframe width="300" height="300"src="https://www.youtube.com/embed/NDyKbOVrnYE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <p>I Have No Words To Say Anything, I'm Deeply Hurt: Naba Das On Kishore Mohanty's Demise</p>   
+            </div>
+            <!-- <div class=" text-green-500 text-lg font-bold text-center rounded-lg">
+              <iframe width="300" height="300" src="https://www.youtube.com/embed/9-svhwu9c-E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>              <p>BJD MLA Kishore Mohanty No More | Last Tributes Paid To Leader At His Residence In Jharsuguda</p>          </div>
+            <p>BJD MLA Kishore Mohanty Passes Away, Reaction Of Amar Prasad Satpathy</p>
+            -->
+            <div class=" text-green-500 text-lg font-bold text-center rounded-lg">
+              <iframe width="300" height="300" src="https://www.youtube.com/embed/QhOBf_7qX5o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <p>BJD MLA Kishore Mohanty Passes Away, Condolences Pour In </p>   
+            </div>
+            
+            <div class=" text-green-500 text-lg font-bold text-center  rounded-lg">
+              <iframe width="300" height="300" src="https://www.youtube.com/embed/tY_W2za0F6M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            
+            <p>He Was Veteran Leader: Sura Routray On Kishore Mohanty's Demise | NandighoshaTV </p>
+            </div>
+            <div class=" text-green-500 text-lg font-bold text-center rounded-lg">
+              <iframe width="300" height="300" src="https://www.youtube.com/embed/TXvMCS_3LUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>          
+           <p>People's reaction captured </p>
+            </div>
+            <div class=" text-green-500 text-lg font-bold text-center  rounded-lg">
+              <iframe width="300" height="300" src="https://www.youtube.com/embed/kU-hmjSWkus" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>              
+              <p>Jay Narayan Mishra expresses his Condolences </p>
+            </div>
+            <div class=" text-green-500 text-lg font-bold text-center  rounded-lg">
+              <iframe width="300" height="300" src="https://www.youtube.com/embed/hQ_5NEw9M6o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>             
+              <p>BJD MLA & Former Odisha Assembly Speaker Kishore Mohanty Passes Away </p>
+            </div>
+            <div class=" text-green-500 text-lg font-bold text-center rounded-lg">
+              <iframe width="300" height="300" src="https://www.youtube.com/embed/wG1-5Xc9rcM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>              
+           <p>MLA Kishore Mohanty's Contribution As A Leader Will Be Remembered Forever | NandighoshaTV</p>
+            </div>
+            <!-- <div class=" text-green-500 text-lg font-bold text-center rounded-lg">
+              <iframe width="300" height="300" src="https://www.youtube.com/embed/1CMl3BXuecI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <p>Brajrajnagar MLA Kishore Mohanty Briefs Media On Smooth Conduct Of Plus 2 Examination</p>
+            </div>
+            <div class=" text-green-500 text-lg font-bold text-center  rounded-lg">
+              <iframe width="300" height="300" src="https://www.youtube.com/embed/cQrACGINT_s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <p>Alaka campaigning for hubby Kishore Mohanty, BJD's Brajrajnagar MLA candidate | Kalinga TV</p>
+            </div> -->
+          
+            <div class=" text-green-500 text-lg font-bold text-center rounded-lg">
+              <iframe width="300" height="300" src="https://www.youtube.com/embed/IewfOIys3m0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>           <p>MLA Kishore Mohanty's Contribution As A Leader Will Be Remembered Forever | NandighoshaTV</p>
+           <p>Remembering Four-time Odisha MLA, Former Speaker Kishore Mohanty | NandighoshaTV</p>
+            </div>
+        </div>
+    </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+  
+  <!-- Carousel code starts -->
+ 
+
+
+  
+<!-- 
+  carousel code ends
+   -->
+   <div class="flex justify-center ... py-2">
+    <button class="bg-blue-500 hover:bg-blue-700 text-white  text-3xl py-6 px-4 rounded-full">
+     Go to Grievance Cell <mat-icon> trending_up </mat-icon>
+    </button>
+  </div>
+    <!-- <section class="bg-white border-b py-8">
+      <div class="container mx-auto flex flex-wrap pt-4 pb-12">
+        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+          Title
+        </h1>
+        <div class="w-full mb-4">
+          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        </div>
+        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+              <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+                xGETTING STARTED
+              </p>
+              <div class="w-full font-bold text-xl text-gray-800 px-6">
+                Lorem ipsum dolor sit amet.
+              </div>
+              <p class="text-gray-800 text-base px-6 mb-5">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+              </p>
+            </a>
+          </div>
+          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+            <div class="flex items-center justify-start">
+              <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                Action
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+              <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+                xGETTING STARTED
+              </p>
+              <div class="w-full font-bold text-xl text-gray-800 px-6">
+                Lorem ipsum dolor sit amet.
+              </div>
+              <p class="text-gray-800 text-base px-6 mb-5">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+              </p>
+            </a>
+          </div>
+          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+            <div class="flex items-center justify-center">
+              <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                Action
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+              <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+                xGETTING STARTED
+              </p>
+              <div class="w-full font-bold text-xl text-gray-800 px-6">
+                Lorem ipsum dolor sit amet.
+              </div>
+              <p class="text-gray-800 text-base px-6 mb-5">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+              </p>
+            </a>
+          </div>
+          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+            <div class="flex items-center justify-end">
+              <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                Action
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+   
+    <!-- Change the colour #f8fafc to match the previous section colour -->
+    <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
+          <g class="wave" fill="#f8fafc">
+            <path
+              d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"
+            ></path>
+          </g>
+          <g transform="translate(1.000000, 15.000000)" fill="#FFFFFF">
+            <g transform="translate(719.500000, 68.500000) rotate(-180.000000) translate(-719.500000, -68.500000) ">
+              <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
+              <path
+                d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+                opacity="0.100000001"
+              ></path>
+              <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" opacity="0.200000003"></path>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+    <!-- <section class="container mx-auto text-center py-6 mb-12">
+      <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
+        Call to Action
+      </h1>
+      <div class="w-full mb-4">
+        <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
+      </div>
+      <h3 class="my-4 text-3xl leading-tight">
+        Main Hero Message to sell yourself!
+      </h3>
+      <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+        Action!
+      </button>
+    </section> -->
+    
+    <!--Footer-->
+    <!-- <footer class="bg-white">
+      <div class="container mx-auto px-8">
+        <div class="w-full flex flex-col md:flex-row py-6">
+          <div class="flex-1 mb-6 text-black">
+            <a class="text-pink-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+             
+              <svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
+                <rect fill="#2a2a31" x="16.539" y="425.626" width="479.767" height="50.502" transform="matrix(1,0,0,1,0,0)" />
+                <path
+                  class="plane-take-off"
+                  d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z "
+                />
+              </svg>
+              LANDING
+            </a>
+          </div>
+          <div class="flex-1">
+            <p class="uppercase text-gray-500 md:mb-6">Links</p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">FAQ</a>
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Help</a>
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Support</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex-1">
+            <p class="uppercase text-gray-500 md:mb-6">Legal</p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Terms</a>
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Privacy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex-1">
+            <p class="uppercase text-gray-500 md:mb-6">Social</p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Facebook</a>
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Linkedin</a>
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Twitter</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex-1">
+            <p class="uppercase text-gray-500 md:mb-6">Company</p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Official Blog</a>
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">About Us</a>
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a href="https://www.freepik.com/free-photos-vectors/background" class="text-gray-500">Background vector created by freepik - www.freepik.com</a>
+    </footer> -->
+
+    
+    <!-- jQuery if you need it
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  -->
+  
+    <ng-template #dialogRefFullScreen  *ngFor="let img of imgList" >
+      <div class="carousel w-full" style="background-color: black;" *ngIf="fullScreenImage.length>0">
+        <section class=" h-screen w-full " [ngStyle]="{'margin-top': isMobileview ? '50%' : '0%' }">
+          <div id="slide1" class="carousel-item relative ">
+            <img src="{{presentSelectedImage}}" class="object-contain w-full h-full"> 
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a (click)="showPrevSlide(presentSelectedImage)" class="btn btn-circle">❮</a> 
+              <a (click)="showNextSlide(presentSelectedImage)" class="btn btn-circle">❯</a>
+            </div>
+          </div> 
+        </section>
+       
+       
+        
+      </div>
+    </ng-template>
+
+  </body>
