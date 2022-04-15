@@ -19,19 +19,27 @@
   </head>
 
   <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
-    <div class="card w-96 bg-base-100 shadow-xl image-full">
-      <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
+    
+    
+    <!--Nav-->
+    <!-- <div class="card w-96 bg-base-100 shadow-xl image-full">
+      <figure><img src="../assets/images/KishorMohantyBanner.jpeg" alt="Shoes" /></figure>
       <div class="card-body">
-        <h2 class="card-title">Shoes!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
+        
+        <figure class="quote">
+          <blockquote>
+            <p class="leading-normal text-2xl mb-8 ">
+              <strong >"ସ୍ୱାମୀଙ୍କ ଅଧୁରା ସ୍ୱପ୍ନ ପୁରା କରିବି !"</strong> 
+             </p>
+          </blockquote>
+          <figcaption>
+            &mdash;   ଅଳକା ମହାନ୍ତି  </figcaption>
+        </figure>
         <div class="card-actions justify-end">
           <button class="btn btn-primary">Buy Now</button>
         </div>
       </div>
-    </div>
-    
-    <!--Nav-->
-   
+    </div> -->
   
     <!-- Banner -->
     <div class="pt-24"  *ngIf="!isMobileview">
@@ -53,12 +61,12 @@
     </div>
     
     <!--Hero-->
-    <div class="pt-24 " >
+    <div class="pt-24" >
      
-      <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center" style="color: black;">
+      <div class="container mx-auto flex flex-wrap flex-col md:flex-row items-center" style="color: black;">
         <!--Left Col-->
      
-        <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+        <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left" *ngIf="!isMobileview">
           <!-- <p class="uppercase tracking-loose w-full">ସ୍ୱାମୀଙ୍କ ଅଧୁରା ସ୍ୱପ୍ନ ପୁରା କରିବି ! </p>
           
           <h1 class="my-4 text-5xl font-bold leading-tight" style=" font-family: 'Lucida Handwriting', 'Courier New', monospace;">
@@ -96,11 +104,59 @@
      
         </div>
         <!--Right Col-->
-        <div class=" w-full md:w-3/5 py-6 text-center z-50 " >
+        <div class="card w-96 bg-base-100 shadow-xl" *ngIf="isMobileview">
+          <figure><img  src="../assets/images/KishorMohantyBanner.jpeg"/></figure>
+          <div class="card-body">
+            <div class=" w-full md:w-3/5 py-6 text-center z-50 " >
+          
+              <img class="w-full md:w-4/5 "  style="border-radius:35%;" src="../assets/images/Alaka.jpg" />
+            </div>
+          </div>
+          <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+            <!-- <p class="uppercase tracking-loose w-full">ସ୍ୱାମୀଙ୍କ ଅଧୁରା ସ୍ୱପ୍ନ ପୁରା କରିବି ! </p>
+            
+            <h1 class="my-4 text-5xl font-bold leading-tight" style=" font-family: 'Lucida Handwriting', 'Courier New', monospace;">
+              Farewell !!
+            </h1> -->
+          
+         
+             <figure class="quote">
+              <blockquote>
+                <p class="leading-normal text-2xl mb-8 ">
+                  <strong >"ସ୍ୱାମୀଙ୍କ ଅଧୁରା ସ୍ୱପ୍ନ ପୁରା କରିବି !"</strong> 
+                 </p>
+              </blockquote>
+              <figcaption>
+                &mdash;   ଅଳକା ମହାନ୍ତି  </figcaption>
+            </figure>
+            <div class="flex">
+         
+              <div class="flex-1 w-64 ...">
+                <button class="mx-auto lg:mx-0 hover:underline btn-primary text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out" 
+                mat-raised-button color="primary"
+                (click)="openDialog()">
+                 Pay Tribute
+                </button>
+              </div>
+              <div class="flex-1 w-32 ...">
+                <button class="mx-auto lg:mx-0 hover:underline btn-primary text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out" 
+                mat-raised-button color="warn"
+                (click)="scrollToBottom()">
+                <mat-icon> arrow_downward </mat-icon>
+                </button>
+              </div>
+            </div>
+           
+       
+          </div>
+        </div>
+        <div class=" w-full md:w-3/5 py-6 text-center z-50 " *ngIf="!isMobileview" >
+          
           <img class="w-full md:w-4/5 "  style="border-radius:100%;" src="../assets/images/Alaka.jpg" />
         </div>
       </div>
     </div>
+
     <div class="relative -mt-12 lg:-mt-24">
       <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -206,7 +262,7 @@
           </div>
           <div class="w-full sm:w-1/2 p-6 mt-6">
             <div class="align-middle">
-              <h2 class="font-medium leading-tight text-4xl mt-0 mb-2 font-bright">Loyalty Personified: </h2>  <h4 class="font-medium leading-tight text-4xl mt-0 mb-2 text-blue-600">
+              <h2 class="font-medium leading-tight text-4xl mt-0 mb-2 font-bright">Loyalty Personified: </h2>  <h4 class="font-medium leading-tight text-4xl mt-0 mb-2 text-cyan">
                 From Janta Dal to Inception of Biju Janta Dal to its Glorious Present !
               </h4>
              
@@ -301,7 +357,7 @@
             <div class="w-full sm:w-1/2 p-6 mt-6">
               <div class="align-middle">
                 <h2 class="font-medium leading-tight text-4xl mt-0 mb-2 font-bright">Faith Restored : </h2> <span>
-                  <h4 class="font-medium leading-tight text-4xl mt-0 mb-2 text-blue-600">
+                  <h4 class="font-medium leading-tight text-4xl mt-0 mb-2 text-cyan">
                     Nominated by C.M. Naveen Patnaik to Rajya Sabha  
                    </h4>
                 </span>
