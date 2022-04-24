@@ -106,7 +106,7 @@ AlakaImglist=[
   onWindowResize() {
     this.getScreenWidth = window.innerWidth;
     this.getScreenHeight = window.innerHeight;
-    console.log("Width of screen is ",this.getScreenWidth)
+    //console.log("Width of screen is ",this.getScreenWidth)
     if(this.getScreenWidth<775){
       this.isMobileview=true
     }else{
@@ -128,13 +128,13 @@ AlakaImglist=[
     
 }
 openFullScreenDialog(): void {
-  console.log("function called")
+ // console.log("function called")
  
   this.dialog.open(this.dialogRefFullScreen,{ panelClass: 'myapp-no-padding-dialog' });
   
 }
 getFullImage(img:string){
-  console.log("image is ",img)
+  //console.log("image is ",img)
   this.fullScreenImage=img
   this.presentSelectedImage=img
   this.openFullScreenDialog()
@@ -150,10 +150,10 @@ this.presentSelectedImage=this.imgList[this.imgList.indexOf(img)+1]
   }else if(this.AlakaImglist.indexOf(img)>-1 && this.AlakaImglist.indexOf(img)!==this.AlakaImglist.length-1){
     this.presentSelectedImage=this.AlakaImglist[this.AlakaImglist.indexOf(img)+1]
       }else if(this.imgList.indexOf(img)===this.imgList.length-1 || this.AlakaImglist.indexOf(img)===this.AlakaImglist.length-1 ){
-        console.log("Should claose all dialog npow")
+     //   console.log("Should claose all dialog npow")
         this.dialog.closeAll()
             }
-  console.log("The present new is ",this.presentSelectedImage)
+//  console.log("The present new is ",this.presentSelectedImage)
 
 }
 showPrevSlide(img:string){
@@ -164,7 +164,7 @@ this.presentSelectedImage=this.imgList[this.imgList.indexOf(img)-1]
       }else if(this.imgList.indexOf(img)===0 || this.AlakaImglist.indexOf(img)===0 ){
   this.dialog.closeAll()
       }
-  console.log("The present new is ",this.presentSelectedImage)
+ // console.log("The present new is ",this.presentSelectedImage)
 
 }
 }
